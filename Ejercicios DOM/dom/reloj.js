@@ -1,5 +1,7 @@
 const d = document;
 
+//función reloj
+
 export function digitalClock(clock, btnPlay, btnStop) {
     let clockTempo;
 
@@ -8,7 +10,7 @@ export function digitalClock(clock, btnPlay, btnStop) {
       clockTempo = setInterval(() => {
         let clockHour = new Date().toLocaleTimeString();
         d.querySelector(clock).innerHTML = `<h3>${clockHour}</h3>`;
-      }, 1000);
+      }, 500);
 
       e.target.disabled = true;
     }
@@ -20,6 +22,9 @@ export function digitalClock(clock, btnPlay, btnStop) {
     }
   });
 }
+
+//función alarma
+
 export function alarm(alarmSound, alarmPlay, alarmStop) {
   let alarmTempo;
   const $alarm = d.createElement("audio");
