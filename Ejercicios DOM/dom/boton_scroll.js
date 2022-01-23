@@ -5,6 +5,9 @@ export default function scrollTopButton(btn){
     const $scrollBtn = d.querySelector(btn);
     
     w.addEventListener("scroll", (e) => {
+        // Propiedades del DOM: 
+        //window.pageYOffset y document.documentElement.scrollTop
+        //console.log(w.pageYOffset, d.documentElement.scrollTop);
         let scrollTop = w.pageYOffset || d.documentElement.scrollTop;
         
         if (scrollTop > 1000){
@@ -13,7 +16,6 @@ export default function scrollTopButton(btn){
             $scrollBtn.classList.add("hidden");    
         }
 
-        console.log(w.pageYOffset, d.documentElement.scrollTop);
     });
 
     d.addEventListener("click", (e) => {
