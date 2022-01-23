@@ -12,9 +12,10 @@ let countdownTempo = setInterval(() => {
     minutes = Math.trunc((limitTime % (1000 * 60 * 60)) / (1000 * 60)),
     seconds = Math.trunc((limitTime % (1000 * 60)) / (1000));
 
-    $countdown.innerHTML = `<h3>Faltan ${days} días, ${hours} horas, ${minutes} minutos y ${seconds} segundos para mi cumpleaños 😊😊</h3>`;
+    $countdown.innerHTML = `<h2>Faltan ${days} días, ${hours} horas, ${minutes} minutos y ${seconds} segundos para:</h2> </br> 
+    <h2>Mi cumpleaños!! </br>😊😊👏😁🎂😎</h2>`;
 
-    console.log(countdownDate, now, limitTime)
+    // console.log(countdownDate, now, limitTime)
     if(limitDate < 0){
         clearInterval(countdownTempo);
         $countdown.innerHTML = `<h3>${finalMessage}</h3>`;

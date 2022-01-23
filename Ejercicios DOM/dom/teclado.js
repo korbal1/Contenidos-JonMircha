@@ -65,7 +65,3 @@ if (e.key === "p" && e.altKey){
     prompt("Haz lanzado una prompt con el teclado");
 }
 }
-
-const fecha = new Date();
-
-console.log(fecha.toLocaleString());
