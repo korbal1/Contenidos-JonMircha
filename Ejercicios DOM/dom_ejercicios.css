@@ -70,7 +70,7 @@ img {
   background-color: var(--second-modal-color);
   transition: transform 0.5s ease;
   /*** Desde costado izquierdo ***/
-  transform: translate(-100%,0);
+  transform: translate(-100%, 0);
 }
 
 .panel.is-active {
@@ -78,18 +78,18 @@ img {
 }
 
 .panel-btn {
-position: fixed;
-z-index: 999;
-bottom: 1vh;
-left: 1vw;
-width: 4rem;
-height: 4rem;
-border-radius: 50%;
-padding: 0;
-display: flex;
-justify-content: center;
-align-items: center;
-background-color: var(--main-color);
+  position: fixed;
+  z-index: 999;
+  bottom: 1vh;
+  left: 1vw;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
 }
 
 .menu {
@@ -240,7 +240,7 @@ background-color: var(--main-color);
   position: relative;
   width: 80%;
   margin: 1rem auto;
-  text-align: center  ;
+  text-align: center;
 }
 
 .slider-slides {
@@ -304,9 +304,9 @@ background-color: var(--main-color);
     display: grid;
     grid-template-columns: 80% 20%;
     grid-template-rows: 4rem auto;
-    grid-template-areas: 
-    "header header"
-    "main panel";
+    grid-template-areas:
+      "header header"
+      "main panel";
   }
 
   .header {
@@ -338,7 +338,7 @@ background-color: var(--main-color);
   }
 
   .menu a {
-    padding: .75rem;
+    padding: 0.75rem;
     font-size: 14px;
   }
 
@@ -370,5 +370,76 @@ background-color: var(--main-color);
   .scroll-top-btn:hover {
     background-color: var(--second-color);
     color: var(--main-color);
+  }
+}
+
+/* ****** ContactForm Validations ************* */
+.contact-form {
+  --form-ok-color: #4caf40;
+  --form-error-color: #f44336;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.contact-form > * {
+  padding: 0.5rem;
+  margin: 1rem auto;
+  display: block;
+  width: 100%;
+  font-family: sans-serif;
+  font-size: 0.8rem;
+}
+
+.contact-form textarea {
+  resize: none;
+}
+
+.contact-form legend,
+.contact-form-response {
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.contact-form input[type="submit"] {
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.contact-form [required]:valid {
+  border: thin solid var(--form-ok-color);
+}
+
+.contact-form [required]:invalid {
+  border: thin solid var(--form-error-color);
+}
+
+.contact-form-error {
+  margin-top: -1rem;
+  font-size: 80%;
+  background-color: var(--form-error-color);
+  color: #fff;
+  transition: all 800ms ease;
+}
+
+.contact-form-error.is-active {
+  display: block;
+  animation: show-message 1s 1 normal 0s ease-out both;
+}
+
+.none {
+  display: none;
+}
+
+@keyframes show-message {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
   }
 }

@@ -10,7 +10,7 @@
     />
     <link
       rel="stylesheet"
-      href="/dom_ejercicios.css"
+      href="dom_ejercicios.css"
     />
     <title>Ejercicios del DOM</title>
   </head>
@@ -41,9 +41,9 @@
         <a href="#seccion10" data-scroll-spy>Filtro de Búsquedas</a>
         <a href="#seccion11" data-scroll-spy>Sorteo Digital</a>
         <a href="#seccion12" data-scroll-spy>Responsive Slider</a>
-        <a href="#seccion13" data-scroll-spy>Sección 13</a>
-        <a href="#seccion14" data-scroll-spy>Sección 14</a>
-        <a href="#seccion15" data-scroll-spy>Sección 15</a>
+        <a href="#seccion13" data-scroll-spy>Video Inteligente</a>
+        <a href="#seccion14" data-scroll-spy>Validaciones de Formularios</a>
+        <a href="#seccion15" data-scroll-spy>Narrador</a>
       </nav>
     </aside>
     <!--Cuerpo principal del sitio-->
@@ -174,13 +174,39 @@
         </div>  
       </section>
       <section id="seccion13" class="section" data-scroll-spy>
-        <h2>Sección 13</h2>
+        <h2>Video Inteligente</h2>
+        <video width="720" height="480" src="/assets/VID_20210224_112229.mp4" muted controls loop data-smart-video></video>
+        <br><br><p>El gabito jugando en una plaza de Las Cruces</p>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <video width="720" height="480" src="/assets/VID_20210224_112229.mp4" muted controls loop data-smart-video></video>
       </section>
       <section id="seccion14" class="section" data-scroll-spy>
-        <h2>Sección 14</h2>
+        <h2>Validaciones de Formularios</h2>
+        <form class="contact-form">
+          <legend>Envíanos tus comentarios</legend>
+          <input type="text" name="name" placeholder="Escribe tu nombre" 
+          title="Debes ingresar un nombre válido" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required >
+          <input type="email" name="email" placeholder="Tu dirección de correo" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" title="Debes ingresar un correo válido" required>
+          <input type="text" name="subject" placeholder="Asunto a tratar">
+          <textarea name="comments" title="Tu comentario no debe exceder los 255 caracteres" data-pattern="^.{1,255}$" cols="50" rows="5" placeholder="Tus comentarios" required></textarea>
+          <input type="submit" value="Enviar">
+          <div class="contact-form-loader none">
+            <img src="assets/preloader.gif" alt="Cargando">
+          </div>
+          <div class="contact-form-response none">  
+            <p>Envío realizado con éxito.</p>
+          </div>
+        </form>
       </section>
       <section id="seccion15" class="section" data-scroll-spy>
-        <h2>Sección 15</h2>
+        <h2>Narrador</h2>
+        <select id="speech-select">
+          <option value="">--- Elige una voz ---</option>
+        </select>
+        <br><br>
+        <textarea id="speech-text" cols="50" rows="5" placeholder="Ingresa texto para leerlo"></textarea>
+        <br><br>
+        <button id="speech-btn">Leer texto</button>
       </section>
     </main>
     <!--Botón Scroll Top-->
