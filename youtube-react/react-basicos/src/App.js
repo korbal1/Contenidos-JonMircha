@@ -1,11 +1,15 @@
 import logo from "./logo.svg";
+import "./App.css";
 import Componente from "./components/Componente";
 import Propiedades from "./components/Propiedades";
 import Estado from "./components/Estado";
 import RenderizadoCondicional from "./components/RenderizadoCondicional";
 import RenderizadoElementos from "./components/RenderizadoElementos";
 import { EventosES6, EventosES7, MasSobreEventos } from "./components/Eventos";
-import "./App.css";
+import Padre from "./components/ComunicacionComponentes";
+import CicloVida from "./components/CicloVida";
+import AjaxApis from "./components/AjaxApis";
+import ContadorHooks from "./components/ContadorHooks";
 
 function App() {
 	return (
@@ -50,6 +54,14 @@ function App() {
 					<EventosES7 />
 					<hr />
 					<MasSobreEventos />
+					<hr />
+					<Padre />
+					<hr />
+					<CicloVida />
+					<hr />
+					<AjaxApis />
+					<hr />
+					<ContadorHooks titulo="Seguidores" />
 				</section>
 			</header>
 		</div>
